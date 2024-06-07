@@ -1,0 +1,78 @@
+base_url = "https://example.com"
+
+title = "spcy"
+description = "game creators"
+default_language = "en"
+theme = "spcy"
+
+output_dir = "public"
+preserve_dotfiles_in_output = false
+minify_html = true
+compile_sass = true
+
+ignored_content = []
+ignored_static = []
+
+generate_feed = false
+# feed_filename = "atom.xml"
+# feed_limit = 20
+
+author = "selectgender / ivy"
+
+taxonomies = []
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+[markdown]
+highlight_code = true
+extra_syntaxes_and_themes = []
+highlight_theme = "base16-ocean-dark"
+
+# for emoji aliases | :sob: => 😭
+render_emoji = false
+
+# we dont need the extra link security i think...
+external_links_target_blank = false
+external_links_no_follow = false
+external_links_no_referrer = false
+
+# converts punctuation into their own characters
+# `...` into `…`, `"quote"` into `“curly”` etc
+smart_punctuation = false
+
+# asynchronous lazy loading for images
+# alt text MUST be plain text when enabled
+lazy_async_image = true
+
+[link_checker]
+# skips link checking w/ specified prefix
+skip_prefixes = []
+skip_anchor_prefixes = []
+
+# treats internal and external link problems as an error
+internal_level = "error"
+external_level = "error"
+
+# makes it so that file names dont have any special characters contained
+# please keep this on lmao
+[slugify]
+paths = "on"
+taxonomies = "on"
+anchors = "on"
+# whether to remove date prefixes for file names
+paths_keep_dates = false
+
+# search is not enabled...
+[search]
+# include_title = true
+# include_description = false
+# include_path = false
+# include_content = true
+
+# whether to produce the search index as a javascript file or as a JSON file
+# Accepted value "elasticlunr_javascript" or "elasticlunr_json"
+# index_format = "elasticlunr_javascript"
+
+[extra]
+# Put all your custom variables here

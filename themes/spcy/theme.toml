@@ -1,0 +1,12 @@
+name = "spcy"
+description = "the theme for this website"
+# license = "idfk"
+# homepage = ""
+# min_version = ""
+# demo = ""
+
+[extra]
+
+[author]
+name = "selectgender / ivy"
+# homepage = ""

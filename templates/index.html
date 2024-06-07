@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+<!-- thank you god for this tutorial: https://dev.to/jgustavoas/solved-how-to-fully-animate-the-details-html-element-with-only-css-and-no-javascript-55ek -->
+
+{% block blog %}
+  <div class="section blog">
+    <div class="posts">
+      <ul>
+        {% for page in section.pages %}
+        <li>
+          <p class="date">{{ page.date }}</p>
+          <details>
+            <summary>{{ page.title }}</summary>
+            <div>
+              {{ page.content | safe }}
+            </div>
+          </details>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const detailsQueries = document.querySelectorAll("details");
+
+		detailsQueries.forEach(details => {
+      details.addEventListener("click", (e) => {
+        if (details.hasAttribute("open")) {
+          e.preventDefault();
+          details.classList.add("closing");
+        }
+      });
+     
+      details.addEventListener("animationend", (e) => {
+        if (e.animationName === "accordion-close") {
+          details.removeAttribute("open");
+          details.classList.remove("closing");
+        }
+      });
+		})
+  </script>
+{% endblock blog %}

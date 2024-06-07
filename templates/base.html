@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- <title>{% block title %}{{ config.title }}{% endblock title %}</title> -->
+    <link rel="stylesheet" href="{{ get_url(path="index.css", cachebust=true) }}" />
+
+    <!-- jarallax css -->
+    <link href="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="jarallax section" data-jarallax data-speed="0">
+      <div class="jarallax-img">
+        <div class="background-img" style="background-image: url('https://source.unsplash.com/brown-smoke-on-black-background-JKAKwrATVq8'); background-size: cover;">
+  				<h1 style="font-size: 6rem">lorem</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="jarallax section" data-jarallax data-speed="0">
+      <div class="jarallax-img">
+        <div class="background-img" style="background-image: url('https://source.unsplash.com/time-lapse-photography-of-corridor-b-L09PzU_LY'); background-size: cover;">
+  				<h1>ipsum dolor</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="jarallax section" data-jarallax data-speed="0">
+      <div class="jarallax-img">
+        <div class="background-img" style="background-image: url('https://source.unsplash.com/timelapse-photography-of-road-crossing-the-street-JbP45MIehEU'); background-size: cover;">
+  				<h1>sit amet</h1>
+        </div>
+      </div>
+    </div>
+
+    {% block blog %} {% endblock %}
+
+    <!-- jarallax scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax-video.min.js"></script>
+  </body>
+</html>
