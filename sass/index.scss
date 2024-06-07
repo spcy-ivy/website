@@ -125,3 +125,16 @@ body {
     }
 	}
 }
+
+.socials {
+	display: flex;
+	flex-direction: row;
+	height: 15vh;
+	width: 45vh;
+
+	.tile {
+		height: 100%;
+		padding: 1%;
+		width: 100%;
+	}
+}
